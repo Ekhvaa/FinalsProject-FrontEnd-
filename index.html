@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script defer src="JS/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="logo">
+        <p class="logo-name">JAMMER</p>
+      </div>
+      <div class="header-nav-wrapper">
+        <nav class="header-nav">
+          <ul class="header-ul">
+            <li><p class="sec" id="genresLink">Genres</p></li>
+            <li><p class="sec" id="topArtistsLink">Top Artists</p></li>
+            <li><p class="sec" id="topTracksLink">Top Tracks</p></li>
+            <li><p class="sec" id="topAlbumsLink">Top Albums</p></li>
+          </ul>
+        </nav>
+      </div>
+      <button class="register-button" id="registerBtn">REGISTER</button>
+      <div class="burger-bar" id="burgerMenu">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </div>
+      <div class="mobile-dropdown" id="mobileDropdown">
+        <ul>
+          <li id="mobileGenresLink">Genres</li>
+          <li id="mobileTopArtistsLink">Top Artists</li>
+          <li id="mobileTopTracksLink">Top Tracks</li>
+          <li id="mobileTopAlbumsLink">Top Albums</li>
+          <li class="mobile-register" id="mobileRegisterBtn">REGISTER</li>
+        </ul>
+      </div>
+    </header>
+    <section class="hero-section">
+      <div class="floating-orb yellow-orb"></div>
+      <div class="floating-orb purple-orb"></div>
+      <div class="hero-container">
+        <div class="intro-text">
+          <h1>Discover New Music That Matches Your Vibe</h1>
+          <p>
+            Explore trending tracks, hot new releases, and hidden gems — all in
+            one place. Browse by genre, mood, or popularity and find your next
+            favorite song.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="Images/kendrick2.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="top-tracks-section">
+      <div class="top-tracks-section-title">
+        <h2>Top Tracks Globally</h2>
+        <p>Here are the most listened tracks right now</p>
+      </div>
+      <div class="top-tracks-container" id="tracksContainer"></div>
+    </section>
+    <section class="modal-section">
+      <div class="modal-overlay hidden" id="modalOverlay">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalHeaderText">Join the Music Community</h2>
+            <span class="close" id="closeModal">&times;</span>
+          </div>
+          <div class="errorContainer">
+            <p id="errorMessage"></p>
+          </div>
+          <form class="registration-form" id="registrationForm">
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" />
+              <button
+                type="button"
+                class="toggle-password"
+                data-target="password"
+              >
+                Show
+              </button>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password:</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                data-target="confirmPassword"
+              >
+                Show
+              </button>
+            </div>
+            <div class="form-buttons">
+              <button type="submit" class="submit-btn" id="submitBtn">
+                Create Account
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <p class="logo-name">JAMMER</p>
+          <p class="slogan">Discover, Vibe, Repeat.</p>
+        </div>
+        <div class="ways-to-contact">
+          <p id="contactLabel">Contact:</p>
+          <div class="contact-information">
+            <p>+1+86 852 346 000<br />info@jammer.com</p>
+            <p>1959 Sepulveda Blvd.<br />Culver City, CA, 90230</p>
+          </div>
+        </div>
+        <div class="footer-socials">
+          <p id="socialsLabel">Follow Us On:</p>
+          <div class="socials-container">
+            <div class="socials" id="instagramLogo">
+              <img src="Images/instagram.svg" alt="" />
+            </div>
+            <div class="socials" id="facebookLogo">
+              <img src="Images/facebook-fill.svg" alt="" />
+            </div>
+            <div class="socials" id="youtubeLogo">
+              <img src="Images/youtube.svg" alt="" />
+            </div>
+            <div class="socials" id="linkedInLogo">
+              <img src="Images/linkedin-big-logo.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Music Discovery App. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <script
+      type="text/javascript"
+      src="//www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js"
+      charset="UTF-8"
+    ></script>
+    <script type="text/javascript" charset="UTF-8">
+      document.addEventListener("DOMContentLoaded", function () {
+        cookieconsent.run({
+          notice_banner_type: "simple",
+          consent_type: "express",
+          palette: "dark",
+          language: "en",
+          page_load_consent_levels: ["strictly-necessary"],
+          notice_banner_reject_button_hide: false,
+          preferences_center_close_button_hide: false,
+          page_refresh_confirmation_buttons: false,
+        });
+      });
+    </script>
+
+    <noscript
+      >Free cookie consent management tool by
+      <a href="https://www.termsfeed.com/">TermsFeed Generator</a></noscript
+    >
+    <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
+    <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+    <a href="#" id="open_preferences_center">Update cookies preferences</a>
+  </body>
+</html>
